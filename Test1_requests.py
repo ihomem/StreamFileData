@@ -46,6 +46,7 @@ with closing(requests.get(url, stream=True)) as r:
     #     print(row)
 
     for row in islice(reader, 10):  # files are iterable
+        print("SHA256: {}".format(row[0]))
         print(row)
 
     # for row in reader:
