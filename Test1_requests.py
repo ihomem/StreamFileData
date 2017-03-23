@@ -1,5 +1,8 @@
-import json
 
+# =========================
+# Sorting out URLs
+# =========================
+import json
 
 def read_config_file(configPath):
     print("Config Path: %s" % str(configPath))
@@ -13,6 +16,10 @@ my_data = read_config_file('FilePaths.json')
 print("AndroZoo URL: {}".format(my_data['androzoo_url']))
 print("Local Path: {}".format(my_data['local_path']))
 print("Other URL: {}".format(my_data['url']))
+
+# ===================
+# Actual code
+# ===================
 
 import csv
 import requests
@@ -37,15 +44,3 @@ with closing(requests.get(url, stream=True)) as r:
 
     for row in islice(reader, 10):  # files are iterable
         print(row)
-
-
-
-
-
-
-
-
-
-
-
-
