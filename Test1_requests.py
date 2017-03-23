@@ -1,4 +1,4 @@
-# Goos solution using Requests, but also check "Test5_urllib"
+# Good solution using Requests, but also check "Test5_urllib"
 
 # =========================
 # Sorting out URLs
